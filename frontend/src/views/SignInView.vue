@@ -1,7 +1,7 @@
 <template>
   <header class="login-header">
-    <div class="grey pull-right hidden-xs">
-      Don't have an account? <RouterLink to="/sign_up">Sign up</RouterLink>.
+    <div class="grey">
+      Don't have an account?<RouterLink to="/sign_up">Sign up</RouterLink>.
     </div>
     <RouterLink to="/"
       ><img
@@ -107,6 +107,9 @@ export default {
 </script>
 
 <style scoped>
+.logo {
+  margin-top: -30px;
+}
 #success {
   color: green;
 }
@@ -138,6 +141,10 @@ export default {
   text-align: center;
   margin: 0 0 30px;
   font-weight: 600;
+}
+
+.grey {
+  margin-left: 80vw;
 }
 
 .formlogin {

@@ -7,7 +7,7 @@ export default {
 </script>
 <template>
   <header class="login-header">
-    <div class="grey pull-right hidden-xs">
+    <div class="grey">
       Already have an account? <RouterLink to="/sign_in">Sign in</RouterLink>.
     </div>
     <RouterLink to="/"
@@ -52,6 +52,12 @@ export default {
 </template>
 
 <style scoped>
+.logo {
+  margin-top: -30px;
+}
+.grey {
+  margin-left: 80vw;
+}
 * {
   padding-right: 15px;
   padding-left: 15px;
