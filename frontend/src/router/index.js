@@ -19,6 +19,11 @@ const router = createRouter({
       name: "sig_up",
       component: () => import("../views/SignUpView.vue"),
     },
+    {
+      path: "/inicio",
+      name: "inicio",
+      component: () => import("../components/InicioVentana.vue"),
+    },
   ],
 });
 

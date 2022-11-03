@@ -2,10 +2,11 @@
   <header>
     <nav>
       <div class="branding">
-        <img
-          class="logo"
-          src="https://img.icons8.com/parakeet/48/000000/anubis.png"
-        />
+        <RouterLink to="/inicio"
+          ><img
+            class="logo"
+            src="https://img.icons8.com/parakeet/48/000000/anubis.png"
+        /></RouterLink>
       </div>
       <ul class="navigation">
         <li><router-link class="link" to="/">Home</router-link></li>
