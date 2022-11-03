@@ -33,11 +33,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.btn {
+  align-items: center;
+}
+
 .btn button {
-  padding: 15px 40px;
+  padding: 15px 50px;
   margin-top: 50px;
-  margin-left: 360px;
-  margin-right: -240px;
+  margin-left: 300px;
   outline: none;
   border: 1px solid #313446;
   border-radius: 20px;
@@ -84,7 +87,7 @@ export default {
 
     h4 {
       margin-top: 50px;
-      margin-left: 430px;
+      margin-left: 490px;
       text-transform: uppercase;
       font-size: 20px;
       padding-bottom: 4px;
@@ -92,7 +95,7 @@ export default {
 
     h1 {
       margin-top: -30px;
-      margin-left: 400px;
+      margin-left: 450px;
       font-size: 60px;
       @media (min-width: 550px) {
         font-size: 80px;
