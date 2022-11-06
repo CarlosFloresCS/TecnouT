@@ -63,4 +63,59 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+.pomodoro-timer.light {
+  background: #fcfcfc;
+  color: #4e4e4e;
+}
+.pomodoro-timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.timer-state {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.timer-countdown {
+  font-size: 54px;
+  line-height: 50px;
+  padding-left: 14px;
+}
+.timer-state .timer-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+}
+timer-state .timer-actions .start-timer .lifeat-button {
+  border: 1.5px solid #4e4e4e;
+  border-radius: 14px;
+  padding: 6px 25px;
+}
+
+.lifeat-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  min-height: 36px;
+  max-height: 36px;
+  width: inherit;
+}
+lifeat-button button {
+  border: 0;
+  padding: 0 5px;
+  font-size: 16px;
+  font-family: "CircularStd";
+}
+.lifeat-button .lifeat-button-visual {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+</style>

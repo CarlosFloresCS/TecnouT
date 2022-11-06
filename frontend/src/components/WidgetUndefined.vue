@@ -63,6 +63,7 @@ export default {
 </script>
 
 <style scoped>
+/*
 * {
   display: flex;
   z-index: 102;
@@ -95,7 +96,7 @@ export default {
   min-height: 150px;
   max-height: 961px;
   max-width: 975px;
-}
+}*/
 
 .widget-header.light {
   color: #4e4e4e;
