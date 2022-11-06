@@ -3,7 +3,7 @@
     <draggable-panel
       class="draggable-panel"
       :canvas-style="{ background: '#FFFFFF' }"
-      :chart-style="{ background: '#1976D255' }"
+      :chart-style="{ background: '#1976D255' }" 
       :width="canvasWidth"
       :height="canvasHeight"
       :padding="32"
