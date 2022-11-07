@@ -1,33 +1,35 @@
 <template>
-  <div class="toolbar">
-    <div class="toolbar-flex">
-      <!--ToolbarWidget reloj-->
-      <ToolbarWidget
-        imgIcon="https://img.icons8.com/dusk/55/null/alarm-clock--v1.png"
-        widgetLabel="Timer"
-      ></ToolbarWidget>
-      <!--ToolbarWidget foro-->
-      <ToolbarWidget
-        imgIcon="https://img.icons8.com/dusk/55/null/form.png"
-        widgetLabel="Foro"
-      ></ToolbarWidget>
-      <!--ToolbarWidget calendario-->
-      <ToolbarWidget
-        imgIcon="https://img.icons8.com/dusk/55/null/calendar--v1.png"
-        widgetLabel="Calendario"
-      ></ToolbarWidget>
-      <!--ToolbarWidget to-do-->
-      <ToolbarWidget
-        imgIcon="https://img.icons8.com/dusk/55/null/checklist.png"
-        widgetLabel="To do"
-      ></ToolbarWidget>
-      <!--ToolbarWidget musica-->
-      <ToolbarWidget
-        imgIcon="https://img.icons8.com/dusk/55/null/google-play-music.png"
-        widgetLabel="Música"
-      ></ToolbarWidget>
+  <span class="dynamic-element">
+    <div class="toolbar">
+      <div class="toolbar-flex">
+        <!--ToolbarWidget reloj-->
+        <ToolbarWidget
+          imgIcon="https://img.icons8.com/dusk/55/null/alarm-clock--v1.png"
+          widgetLabel="Timer"
+        ></ToolbarWidget>
+        <!--ToolbarWidget foro-->
+        <ToolbarWidget
+          imgIcon="https://img.icons8.com/dusk/55/null/form.png"
+          widgetLabel="Foro"
+        ></ToolbarWidget>
+        <!--ToolbarWidget calendario-->
+        <ToolbarWidget
+          imgIcon="https://img.icons8.com/dusk/55/null/calendar--v1.png"
+          widgetLabel="Calendario"
+        ></ToolbarWidget>
+        <!--ToolbarWidget to-do-->
+        <ToolbarWidget
+          imgIcon="https://img.icons8.com/dusk/55/null/checklist.png"
+          widgetLabel="To do"
+        ></ToolbarWidget>
+        <!--ToolbarWidget musica-->
+        <ToolbarWidget
+          imgIcon="https://img.icons8.com/dusk/55/null/google-play-music.png"
+          widgetLabel="Música"
+        ></ToolbarWidget>
+      </div>
     </div>
-  </div>
+  </span>
 </template>
 
 <script>

@@ -18,24 +18,4 @@ export default {
 };
 </script>
 
-<style scoped>
-#widgetWorkspace {
-  z-index: 100;
-}
-
-span {
-  user-select: text;
-}
-
-#widgetCanvas {
-  z-index: 100;
-}
-
-.workspace {
-  background: transparent;
-}
-
-div {
-  display: block;
-}
-</style>
+<style scoped></style>
