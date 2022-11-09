@@ -16,7 +16,7 @@ class Usuario(db.Model):
   fondos = db.relationship('Fondo',secondary=usuarios_fondos, lazy='subquery',backref=db.backref('usuarios',lazy=True)) # relacion de muchos a muchos //listo
   to_dos = db.relationship('To_do',backref='usuario')
   def __repr__(self):
-    return '<User {} {}>'.format(self.nombre,self.correo)
+    return '<User {} {}>'.format(self.nombre,self.email)
 
 class Permiso(db.Model):
 	servicio = db.Column(db.String(20), primary_key=True)
