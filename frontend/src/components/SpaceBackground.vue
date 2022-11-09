@@ -34,8 +34,7 @@ export default {
 <style scoped></style>
 -->
 <template>
-  <!--<div><img :src="image" class="img" /></div>-->
-  <div class="hero"></div>
+  <div><img :src="image" class="img" /></div>
 </template>
 
 <script>

@@ -24,36 +24,34 @@
         <div class="or-login">
           <span>OR</span>
         </div>
-        <form method="POST" class="form-group">
-          <label for="email">Email address</label>
-          <input
-            :value="email"
-            @input="onEmailInput"
-            autofocus="autofocus"
-            class="form-control"
-            name="email"
-            id="email"
-            placeholder="you@email.com"
-            required="required"
-          />
-          <label for="password">Password</label>
-          <input
-            type="password"
-            :value="password"
-            @input="onPasswordInput"
-            class="form-control"
-            name="password"
-            id="password"
-            placeholder="password"
-            required="required"
-          />
-          <button @click="onSignIn" class="btn-gris">Sign in</button>
-          <br /><br />
-          <div v-if="success && loginAttempt" id="success">Success!</div>
-          <div v-if="!success && loginAttempt" id="fail">
-            Incorrect username or password
-          </div>
-        </form>
+        <label for="email">Email address</label>
+        <input
+          :value="email"
+          @input="onEmailInput"
+          autofocus="autofocus"
+          class="form-control"
+          name="email"
+          id="email"
+          placeholder="you@email.com"
+          required="required"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          :value="password"
+          @input="onPasswordInput"
+          class="form-control"
+          name="password"
+          id="password"
+          placeholder="password"
+          required="required"
+        />
+        <button @click="onSignIn" class="btn-gris">Sign in</button>
+        <br /><br />
+        <div v-if="success && loginAttempt" id="success">Success!</div>
+        <div v-if="!success && loginAttempt" id="fail">
+          Incorrect username or password
+        </div>
       </div>
     </div>
   </main>
@@ -82,17 +80,17 @@ export default {
       this.password = e.target.value;
     },
     onSignIn() {
-      console.log("hola");
       const url = "http://localhost:5000/login";
       const body = {
         email: this.email,
         password: this.password,
       };
-
+      console.log(JSON.stringify(body));
       fetch(url, {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
+          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
         },
       })
