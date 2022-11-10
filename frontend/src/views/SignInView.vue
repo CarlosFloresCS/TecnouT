@@ -81,7 +81,7 @@ export default {
       this.password = e.target.value;
     },
     onSignIn() {
-      const url = "http://localhost:5000/login";
+      const url = "http://localhost:5000/login/";
       const body = {
         email: this.email,
         password: this.password,
@@ -104,7 +104,7 @@ export default {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
-          "Content-Type": "text/html",
+          "Content-Type": "application/json",
         },
       })
         .then((resp) => resp.json())
