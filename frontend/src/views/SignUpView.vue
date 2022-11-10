@@ -1,10 +1,3 @@
-<script>
-import { RouterLink } from "vue-router";
-export default {
-  name: "LoginView",
-  components: { RouterLink },
-};
-</script>
 <template>
   <header class="login-header">
     <div class="grey">
@@ -20,44 +13,115 @@ export default {
     <h1>
       Create a free account
       <div class="subtitulo">TecnouT can be used for free, forever.</div>
-    </h1>
-    <form class="formlogin" id="signin_form">
-      <div class="board_box">
-        <button class="btn-lg" type="button">
-          <img
-            src="https://img.icons8.com/color/20/000000/google-logo.png"
-            alt="google"
-            class="imgoogle"
-          />
-          Sign in with Google
-        </button>
-        <div class="or-login">
-          <span>OR</span>
-        </div>
-        <div class="form-group">
-          <label for="email-field">Email address</label>
-          <input
-            type="email"
-            autofocus="autofocus"
-            class="form-control"
-            id="email-field"
-            placeholder="you@email.com"
-            required="required"
-          />
-        </div>
-        <button class="btn-gris" type="submit">Continue</button>
+    </h1> 
+    <div class="board_box">
+      <button class="btn-lg" type="button">
+        <img
+          src="https://img.icons8.com/color/20/000000/google-logo.png"
+          alt="google"
+          class="imgoogle"
+        />
+        Sign in with Google
+      </button>
+      <div class="or-login">
+        <span>OR</span>
       </div>
-    </form>
+      <div class="form-group">
+        <label for="newEmail">Email address:</label>
+        <input
+          type="email"
+          autofocus="autofocus"
+          class="form-control"
+          id="newEmail"
+          placeholder="you@email.com"
+          required="required"
+          :value="newEmail"
+          @input="onNewEmailInput"
+        />
+        <br />
+        <label for="newNombre">Name:</label>
+        <input type="text" :value="newNombre" @input="onNewNombreInput" />
+        <br />
+        <label for="newApellido">Apellido:</label>
+        <input type="text" :value="newApellido" @input="onNewApellidoInput" />
+        <br />
+        <label for="newPassword">Password:</label>
+        <input
+          type="password"
+          :value="newPassword"
+          @input="onNewPasswordInput"
+        />
+        <br /><br />
+        <button @click="onNewUsuario">Registrarse</button>
+      </div>
+      <button class="btn-gris" type="submit">Continue</button>
+    </div>
   </main>
 </template>
+
+<script>
+export default {
+  name: "SignUpView",
+  data() {
+    return {
+      newEmail: "",
+      newNombre: "",
+      newApellido: "",
+      newPassword: "",
+      userExists: false,
+    };
+  },
+  methods: {
+    onNewEmailInput(e) {
+      this.userExists = false;
+      this.newEmail = e.target.value;
+    },
+    onNewNombreInput(e) {
+      this.userExists = false;
+      this.newNombre = e.target.value;
+    },
+    onNewApellidoInput(e) {
+      this.userExists = false;
+      this.newApellido = e.target.value;
+    },
+    onNewPasswordInput(e) {
+      this.userExists = false;
+      this.newPassword = e.target.value;
+    },
+    onNewUsuario() {
+      const url = "http://127.0.0.1:5000/register";
+      const body = {
+        newEmail: this.newEmail,
+        newPassword: this.newPassword,
+        newNombre: this.newNombre,
+        newApellido: this.newApellido,
+      };
+      console.log(JSON.stringify(body));
+      fetch(url, {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resp) => resp.json())
+        .then((data) => {
+          console.log(data);
+        });
+    },
+  },
+};
+</script>
 
 <style scoped>
 .logo {
   margin-top: -30px;
 }
+
 .grey {
   margin-left: 80vw;
 }
+
 * {
   padding-right: 15px;
   padding-left: 15px;

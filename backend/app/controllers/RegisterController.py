@@ -1,5 +1,5 @@
-from app import request,db
-from flask import json
+from app import db
+from flask import json,request
 from app.models import Usuario
 
 def register():

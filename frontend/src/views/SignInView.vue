@@ -59,6 +59,7 @@
 
 <script>
 import { RouterLink } from "vue-router";
+//import axios from "axios";
 export default {
   name: "LoginView",
   components: { RouterLink },
@@ -85,13 +86,25 @@ export default {
         email: this.email,
         password: this.password,
       };
+      //axios
+      //  .post(url, body, {
+      //    headers: {
+      //      "Content-Type": "application/json",
+      //    },
+      //  })
+      //  .then((result) => {
+      //    this.loginAttempt = true;
+      //    this.success = result.success;
+      //  })
+      //  .catch((error) => {
+      //    console.log(error);
+      //  });
       console.log(JSON.stringify(body));
       fetch(url, {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
+          "Content-Type": "text/html",
         },
       })
         .then((resp) => resp.json())

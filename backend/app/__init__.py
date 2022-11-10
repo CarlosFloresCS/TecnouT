@@ -6,7 +6,7 @@ from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.secret_key = "proyectoDBP"
+#app.secret_key = "proyectoDBP"
 cors = CORS(app)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
