@@ -111,6 +111,9 @@ export default {
         .then((data) => {
           this.loginAttempt = true;
           this.success = data.success;
+          setTimeout(() => {
+            window.location.href = "http://localhost:5173/inicio";
+          });
         });
     },
   },

@@ -1,38 +1,3 @@
-<!--
-<template>
-  <div class="imageContainer">
-    <a :id="imageLink" href="#"> <img :id="imageElement" /></a>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "SpaceBackground",
-  data() {
-    return {
-      endpoint:
-        "https://api.unsplash.com/photos/random/?client_id=SX8f-ypl054JtSFlkSmcP8PSTDZKbEKs79KxxvI6Dm4",
-      imageElement: document.querySelector("#unsplashImage"),
-      imageLink: document.querySelector("#imageLink"),
-      creator: document.querySelector("#creator"),
-    };
-  },
-  created() {
-    fetch(this.endpoint)
-      .then((response) => response.json())
-      .then((jsonData) => {
-        this.imageElement.src = jsonData.urls.regular;
-        this.imageLink.setAttribute("href", jsonData.user.portfolio_url);
-      })
-      .catch((error) => {
-        console.log("Error:" + error);
-      });
-  },
-};
-</script>
-
-<style scoped></style>
--->
 <template>
   <div><img :src="image" class="img" /></div>
 </template>
