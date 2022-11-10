@@ -22,7 +22,8 @@ const router = createRouter({
     {
       path: "/inicio",
       name: "inicio",
-      component: () => import("../components/InicioVentana.vue"),
+      component: () => import("../views/InicioView.vue"),
+      //() => import("../components/InicioVentana.vue"),
     },
   ],
 });

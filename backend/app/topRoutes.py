@@ -12,7 +12,7 @@ def getUsers():
     print(users)
     userList = []
     for user in users:
-        userList.append({"nombre": user.username, "apellido": user.apellido})
+        userList.append({"nombre": user.nombre, "apellido": user.apellido})
     return json.dumps(userList)
 
 @app.route('/')
