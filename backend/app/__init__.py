@@ -13,9 +13,9 @@ db = SQLAlchemy(app)
 
 
 from app import models, topRoutes
-from app.routes.login_bp import *
-from app.routes.register_bp import *
+from app.routes.auth.email_login_bp import email_login_bp
+from app.routes.auth.email_register_C import email_register_bp
 
-app.register_blueprint(login_bp, url_prefix="/login")
-app.register_blueprint(register_bp, url_prefix="/register")
+app.register_blueprint(email_login_bp, url_prefix="/auth")
+app.register_blueprint(email_register_bp, url_prefix="/auth")
 db.create_all()

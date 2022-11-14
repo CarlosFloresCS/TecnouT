@@ -20,4 +20,3 @@ def login():
             return json.dumps({"success": True})
     except:
         return json.dumps({"success": False})
-

@@ -81,7 +81,7 @@ export default {
       this.password = e.target.value;
     },
     onSignIn() {
-      const url = "http://localhost:5000/login/";
+      const url = "http://localhost:5000/auth/login";
       const body = {
         email: this.email,
         password: this.password,
@@ -98,9 +98,11 @@ export default {
         .then((data) => {
           this.loginAttempt = true;
           this.success = data.success;
-          setTimeout(() => {
-            window.location.href = "http://localhost:5173/inicio";
-          });
+          if (this.success) {
+            setTimeout(() => {
+              window.location.href = "http://localhost:5173/inicio";
+            });
+          }
         });
     },
   },

@@ -89,7 +89,7 @@ export default {
       this.newPassword = e.target.value;
     },
     onNewUsuario() {
-      const url = "http://127.0.0.1:5000/register/";
+      const url = "http://127.0.0.1:5000/auth/register";
       const body = {
         newEmail: this.newEmail,
         newPassword: this.newPassword,
