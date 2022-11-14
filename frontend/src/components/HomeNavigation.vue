@@ -10,7 +10,7 @@
       </div>
       <ul class="navigation">
         <li><router-link class="link" to="/">Home</router-link></li>
-        <li><router-link class="link" to="#">About</router-link></li>
+        <li><router-link class="link" to="/about">About</router-link></li>
         <li><router-link class="link" to="#">Contact</router-link></li>
       </ul>
       <div class="icon">

@@ -86,19 +86,6 @@ export default {
         email: this.email,
         password: this.password,
       };
-      //axios
-      //  .post(url, body, {
-      //    headers: {
-      //      "Content-Type": "application/json",
-      //    },
-      //  })
-      //  .then((result) => {
-      //    this.loginAttempt = true;
-      //    this.success = result.success;
-      //  })
-      //  .catch((error) => {
-      //    console.log(error);
-      //  });
       console.log(JSON.stringify(body));
       fetch(url, {
         method: "POST",
